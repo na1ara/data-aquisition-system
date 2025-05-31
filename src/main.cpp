@@ -3,6 +3,7 @@
 #include <ctime>
 #include <iomanip>
 #include <sstream>
+#include <fstream>
 
 using boost::asio::ip::tcp;
 
@@ -97,6 +98,11 @@ std::vector<char> new_message(const LogRecord& record) {
     std::memcpy(buffer.data(), &record, sizeof(LogRecord));
     
     return buffer;
+}
+
+void consulta(char ID, int n){
+    // pega as ultimas n leituras do sensor id
+
 }
 
 int main(int argc, char* argv[]) {
